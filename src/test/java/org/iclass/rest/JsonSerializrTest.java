@@ -53,6 +53,7 @@ class JsonSerializrTest {
 		String result =
 		"{\"id\":\"newjeans\",\"name\":\"뉴진스\",\"email\":null,\"age\":19,\"gender\":\"F\",\"hobbies\":\"야구,스키\",\"joinDate\":null,\"address\":\"서울\"}";		//json 문자열		
 //		"{\"id\":\"newjeans\",\"name\":\"뉴진스\",\"email\":null,\"age\":19,\"gender\":\"F\",\"hobbies\":\"야구,스키\",\"joinDate\"\"2023-03-20\",\"address\":\"서울\"}";		//json 문자열		
+		//커스텀으로 LocalDateTime 타입 직렬 또는 역직렬 패턴 설정해야함.
 		//따옴표도 전달한 문자이기 때문에\"
 		NewMember member = objectMapper.readValue(result, NewMember.class);
 		log.info("======json 문자열 역직렬화된 java객체 : {}",member);
